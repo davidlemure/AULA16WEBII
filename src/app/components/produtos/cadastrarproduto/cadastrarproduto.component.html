@@ -10,6 +10,8 @@
           type="text"
           class="form-control"
           placeholder="Digite o nome do Produto"
+          name="nomeProduto"
+          [(ngModel)]="nome"
           />
         </div>
       </div>
@@ -21,6 +23,8 @@
           <input
           type="date"
           class="form-control"
+          name="validade"
+          [(ngModel)]="validade"
           />
         </div>
       </div> <!-- Fim col -->
@@ -31,21 +35,24 @@
           type="number"
           class="form-control"
           placeholder="0.00"
+          name="preco"
+          [(ngModel)]="preco"
           />
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <Button class="btn btn-default" routerLink="/produtos">
-          Voltar
-        </Button>
-        <button class="btn btn-success float-right">
-          Salvar
-        </button>
+        <Button class="btn btn-default" routerLink="/produtos"> Voltar </Button>
+        <button class="btn btn-success float-right" (click)="salvarProduto()"> Salvar </button>
       </div>
     </div>
   </form>
+</div>
+<div class="card mt-3">
+  <p>Nome: {{ nome }}</p>
+  <p>Validade: {{ validade }}</p>
+  <p>Preço: {{ preco }}</p>
 </div>
 
 
