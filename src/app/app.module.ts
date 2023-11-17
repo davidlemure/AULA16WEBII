@@ -21,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListarProdutosComponent } from './components/produtos/listarprodutos/listarProdutos.component';
 import { ToastrModule } from 'ngx-toastr';
 
+import { EMPTY, Observable } from 'rxjs';
+import {map, catchError} from 'rxjs/operators';
+import { ToastrService } from 'ngx-toastr'; 
+
 
 
 registerLocaleData(localePt);
