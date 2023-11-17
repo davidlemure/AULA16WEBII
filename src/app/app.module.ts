@@ -2,6 +2,7 @@
 import { HomeComponent } from './components/home/home.component';
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,8 @@ import { SharedModule } from './shared/shared.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ListarProdutosComponent } from './components/produtos/listarprodutos/listarProdutos.component';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 registerLocaleData(localePt);
@@ -37,7 +40,9 @@ registerLocaleData(localePt);
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt-BR' },
