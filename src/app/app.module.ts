@@ -1,12 +1,13 @@
+
 import { HomeComponent } from './components/home/home.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
-import { ListarprodutosComponent } from './components/produtos/listarprodutos/listarprodutos.component';
+
 import { CadastrarprodutoComponent } from './components/produtos/cadastrarproduto/cadastrarproduto.component';
 
 import { LOCALE_ID } from '@angular/core';
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ListarProdutosComponent } from './components/produtos/listarprodutos/listarProdutos.component';
 
 
 registerLocaleData(localePt);
@@ -27,7 +29,7 @@ registerLocaleData(localePt);
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ListarprodutosComponent,
+    ListarProdutosComponent,
     CadastrarprodutoComponent
   ],
   imports: [
